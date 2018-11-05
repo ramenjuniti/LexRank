@@ -1,4 +1,4 @@
-package LexRank
+package lexrank
 
 import (
 	"fmt"
@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	"github.com/dcadenas/pagerank"
-
 	"github.com/gaspiman/cosine_similarity"
 	"github.com/ikawaha/kagome/tokenizer"
 )
@@ -35,18 +34,18 @@ type LexRankScore struct {
 }
 
 const (
-	DEFAULT_MAX_CHARACTERS = 0
-	DEFAULT_THRESHOLD      = 0.5
-	DEFAULT_TOLERANCE      = 0.0001
-	DEFAULT_DAMPING        = 0.85
+	defaultMaxCharacters = 0
+	defaultThreshold     = 0.5
+	defaultTolerance     = 0.0001
+	defaultDamping       = 0.85
 )
 
 func New() *SummaryData {
 	return &SummaryData{
-		maxCharacters: DEFAULT_MAX_CHARACTERS,
-		threshold:     DEFAULT_THRESHOLD,
-		tolerance:     DEFAULT_TOLERANCE,
-		damping:       DEFAULT_DAMPING,
+		maxCharacters: defaultMaxCharacters,
+		threshold:     defaultThreshold,
+		tolerance:     defaultTolerance,
+		damping:       defaultDamping,
 	}
 }
 

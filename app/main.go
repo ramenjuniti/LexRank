@@ -1,9 +1,9 @@
 package main
 
 import (
-	"LexRank"
 	"fmt"
 	"io/ioutil"
+	"lexrank"
 	"os"
 )
 
@@ -14,7 +14,7 @@ func main() {
 		os.Exit(1)
 	}
 	text := string(file)
-	summary := LexRank.New()
+	summary := lexrank.New()
 	summary.Summarize(text, "。")
 	fmt.Println(summary.LexRankScores[0].Index)
 }
