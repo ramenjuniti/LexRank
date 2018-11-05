@@ -11,6 +11,7 @@ import (
 	"github.com/ikawaha/kagome/tokenizer"
 )
 
+// SummaryData contains data for summary
 type SummaryData struct {
 	originalSentences []string
 	wordsPerSentence  [][]string
@@ -19,7 +20,7 @@ type SummaryData struct {
 	tfIdfScores       [][]float64
 	similarityMatrix  [][]float64
 
-	LexRankScores []LexRankScore
+	LexRankScores []lexRankScore
 
 	maxCharacters int
 	threshold     float64
@@ -27,7 +28,7 @@ type SummaryData struct {
 	damping       float64
 }
 
-type LexRankScore struct {
+type lexRankScore struct {
 	Index    int
 	Sentence string
 	Score    float64
@@ -40,6 +41,7 @@ const (
 	defaultDamping       = 0.85
 )
 
+// New return SummaryData
 func New() *SummaryData {
 	return &SummaryData{
 		maxCharacters: defaultMaxCharacters,
@@ -49,6 +51,7 @@ func New() *SummaryData {
 	}
 }
 
+// Set set SummaryData params
 func (s *SummaryData) Set(m int, th, to, d float64) {
 	s.maxCharacters = m
 	s.threshold = th
@@ -56,6 +59,7 @@ func (s *SummaryData) Set(m int, th, to, d float64) {
 	s.damping = d
 }
 
+// Summarize generate summary
 func (s *SummaryData) Summarize(text, delimiter string) {
 	if len(text) == 0 || len(delimiter) == 0 {
 		fmt.Println("input isn't specifyed.")
@@ -160,7 +164,7 @@ func (s *SummaryData) createSimilarityMatrix() {
 
 func (s *SummaryData) calculateLexRank() {
 	graph := pagerank.New()
-	s.LexRankScores = make([]LexRankScore, len(s.originalSentences))
+	s.LexRankScores = make([]lexRankScore, len(s.originalSentences))
 	for i, similarityList := range s.similarityMatrix {
 		for j, similarity := range similarityList {
 			if similarity >= s.threshold {
@@ -169,7 +173,7 @@ func (s *SummaryData) calculateLexRank() {
 		}
 	}
 	graph.Rank(s.damping, s.tolerance, func(identifier int, rank float64) {
-		s.LexRankScores[identifier] = LexRankScore{Index: identifier, Sentence: s.originalSentences[identifier], Score: rank}
+		s.LexRankScores[identifier] = lexRankScore{Index: identifier, Sentence: s.originalSentences[identifier], Score: rank}
 	})
 	sort.Slice(s.LexRankScores, func(i, j int) bool {
 		return s.LexRankScores[i].Score > s.LexRankScores[j].Score
