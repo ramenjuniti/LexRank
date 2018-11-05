@@ -8,3 +8,8 @@ script:
  - go vet ./...
  - diff <(goimports -d .) <(printf "")
  - diff <(golint ./...) <(printf "")
+
+install:
+  - go get "github.com/dcadenas/pagerank"
+  - go get "github.com/gaspiman/cosine_similarity"
+  - go get "github.com/ikawaha/kagome/tokenizer"
