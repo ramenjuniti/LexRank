@@ -6,9 +6,9 @@
 
 ## Dependency
 
-* github.com/dcadenas/pagerank
-* github.com/gaspiman/cosine_similarity
-* github.com/ikawaha/kagome
+* [github.com/dcadenas/pagerank](https://github.com/dcadenas/pagerank)
+* [github.com/gaspiman/cosine_similarity](https://github.com/gaspiman/cosine_similarity)
+* [github.com/ikawaha/kagome](https://github.com/ikawaha/kagome)
 
 ## install
 
