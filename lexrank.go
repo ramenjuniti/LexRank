@@ -29,9 +29,9 @@ type SummaryData struct {
 }
 
 type lexRankScore struct {
-	Id       int
-	Sentence string
-	Score    float64
+	Id       int     `json:"id"`
+	Sentence string  `json:"sentence"`
+	Score    float64 `json:"score"`
 }
 
 const (
