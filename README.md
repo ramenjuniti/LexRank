@@ -1,6 +1,6 @@
 # LexRank
 
-[![Build Status](https://travis-ci.org/ramenjuniti/LexRank.svg?branch=master)](https://travis-ci.org/ramenjuniti/LexRank)
+[![Build Status](https://travis-ci.org/ramenjuniti/lexrank.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank)
 
 [LexRank: Graph-based Lexical Centrality as Salience in Text Summarization](https://hazm.at/mox/machine-learning/natural-language-processing/summarization/lexrank/index.html)
 
