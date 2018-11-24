@@ -274,7 +274,6 @@ func (s *SummaryData) createLineLimitedSummary() {
 	s.LineLimitedSummary = []lexRankScore{}
 	if s.maxLines >= len(s.originalSentences) {
 		s.LineLimitedSummary = append(s.LineLimitedSummary, s.LexRankScores...)
-		copy(s.LineLimitedSummary, s.LexRankScores)
 		return
 	}
 	s.LineLimitedSummary = append(s.LineLimitedSummary, s.LexRankScores[:s.maxLines]...)
