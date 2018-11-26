@@ -124,10 +124,6 @@ func (s *SummaryData) Summarize(text, delimiter string) {
 	s.calculateTfidf()
 	s.createSimilarityMatrix()
 	s.calculateLexRank()
-	if len(s.LexRankScores) == 0 {
-		fmt.Println("cannot summarize.")
-		return
-	}
 	s.calculateMmr()
 	s.createLineLimitedSummary()
 	sort.Slice(s.LineLimitedSummary, func(i, j int) bool {
@@ -250,6 +246,9 @@ func (s *SummaryData) calculateLexRank() {
 }
 
 func (s *SummaryData) calculateMmr() {
+	if len(s.LexRankScores) == 0 {
+		return
+	}
 	s.ReRanking = []lexRankScore{s.LexRankScores[0]}
 	for len(s.LexRankScores) > len(s.ReRanking) {
 		var maxMmr float64
