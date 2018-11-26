@@ -124,6 +124,10 @@ func (s *SummaryData) Summarize(text, delimiter string) {
 	s.calculateTfidf()
 	s.createSimilarityMatrix()
 	s.calculateLexRank()
+	if len(s.LexRankScores) == 0 {
+		fmt.Println("cannot summarize.")
+		return
+	}
 	s.calculateMmr()
 	s.createLineLimitedSummary()
 	sort.Slice(s.LineLimitedSummary, func(i, j int) bool {
