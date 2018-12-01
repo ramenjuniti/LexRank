@@ -1,14 +1,16 @@
-# LexRank
+# lexrank-mmr
 
 [![Build Status](https://travis-ci.org/ramenjuniti/lexrank.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank)
 
 [LexRank: Graph-based Lexical Centrality as Salience in Text Summarization](https://hazm.at/mox/machine-learning/natural-language-processing/summarization/lexrank/index.html)
 
+[The Use of MMR, Diversity-Based Reranking for Reordering Documents and Producing Summaries](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.3982&rep=rep1&type=pdf)
+
 ## Dependency
 
-* [github.com/dcadenas/pagerank](https://github.com/dcadenas/pagerank)
-* [github.com/gaspiman/cosine_similarity](https://github.com/gaspiman/cosine_similarity)
-* [github.com/ikawaha/kagome](https://github.com/ikawaha/kagome)
+- [github.com/dcadenas/pagerank](https://github.com/dcadenas/pagerank)
+- [github.com/gaspiman/cosine_similarity](https://github.com/gaspiman/cosine_similarity)
+- [github.com/ikawaha/kagome](https://github.com/ikawaha/kagome)
 
 ## install
 
