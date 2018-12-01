@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ramenjuniti/lexrank.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank)
 
-[LexRank: Graph-based Lexical Centrality as Salience in Text Summarization](https://hazm.at/mox/machine-learning/natural-language-processing/summarization/lexrank/index.html)
+[LexRank: Graph-based Lexical Centrality as Salience in Text Summarization](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume22/erkan04a-html/erkan04a.html)
 
 [The Use of MMR, Diversity-Based Reranking for Reordering Documents and Producing Summaries](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.188.3982&rep=rep1&type=pdf)
 
