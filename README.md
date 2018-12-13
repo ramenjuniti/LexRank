@@ -1,6 +1,6 @@
 # lexrank-mmr
 
-[![Build Status](https://travis-ci.org/ramenjuniti/lexrank.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank)
+[![Build Status](https://travis-ci.org/ramenjuniti/lexrank-mmr.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank-mmr)
 
 [LexRank: Graph-based Lexical Centrality as Salience in Text Summarization](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume22/erkan04a-html/erkan04a.html)
 
