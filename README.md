@@ -18,6 +18,27 @@
 go get github.com/ramenjuniti/lexrank
 ```
 
+## Usage
+
+```go
+package main
+
+import github.com/ramenjuniti/lexrank
+
+func main() {
+    text := "Please input the document you want to summarize here."
+    summary := lexrank.New(
+        lexrank.MaxLines(maxLines),            // option (default 0)
+        lexrank.MaxCharacters(maxCharacters),  // option (default 0)
+        lexrank.Threshold(threshold),          // option (default 0.1)
+        lexrank.Tolerance(tolerance),          // option (default 0.0001)
+        lexrank.Damping(damping),              // option (default 0.85)
+        lexrank.Lambda(lambda),                // option (default 1.0)
+	)
+    summary.Summarize(text)
+}
+```
+
 ## License
 
 This software is released under the MIT License, see LICENSE.
