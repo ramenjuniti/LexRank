@@ -34,7 +34,7 @@ func main() {
         lexrank.Tolerance(tolerance),          // option (default 0.0001)
         lexrank.Damping(damping),              // option (default 0.85)
         lexrank.Lambda(lambda),                // option (default 1.0)
-	)
+    )
     summary.Summarize(text)
 }
 ```
