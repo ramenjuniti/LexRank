@@ -1,4 +1,4 @@
-# lexrank-mmr
+# lexrankmmr
 
 [![Build Status](https://travis-ci.org/ramenjuniti/lexrank-mmr.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrank-mmr)
 
@@ -31,7 +31,7 @@ import github.com/ramenjuniti/lexrank
 
 func main() {
     text := "Please input the document you want to summarize here."
-    summary := lexrank.New(
+    summary, err := lexrank.New(
         lexrank.MaxLines(maxLines),            // option (default 0)
         lexrank.MaxCharacters(maxCharacters),  // option (default 0)
         lexrank.Threshold(threshold),          // option (default 0.1)
@@ -39,7 +39,10 @@ func main() {
         lexrank.Damping(damping),              // option (default 0.85)
         lexrank.Lambda(lambda),                // option (default 1.0)
     )
-    summary.Summarize(text)
+    err = summary.Summarize(text)
+    if err != nil {
+        log.Fatal(err)
+    }
 }
 ```
 
