@@ -19,7 +19,7 @@
 ## install
 
 ```sh
-go get github.com/ramenjuniti/lexrank
+go get github.com/ramenjuniti/lexrankmmr
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ go get github.com/ramenjuniti/lexrank
 ```go
 package main
 
-import github.com/ramenjuniti/lexrank
+import github.com/ramenjuniti/lexrankmmr
 
 func main() {
     text := "Please input the document you want to summarize here."
