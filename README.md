@@ -31,13 +31,13 @@ import github.com/ramenjuniti/lexrankmmr
 
 func main() {
     text := "Please input the document you want to summarize here."
-    summary, err := lexrank.New(
-        lexrank.MaxLines(maxLines),            // option (default 0)
-        lexrank.MaxCharacters(maxCharacters),  // option (default 0)
-        lexrank.Threshold(threshold),          // option (default 0.1)
-        lexrank.Tolerance(tolerance),          // option (default 0.0001)
-        lexrank.Damping(damping),              // option (default 0.85)
-        lexrank.Lambda(lambda),                // option (default 1.0)
+    summary, err := lexrankmmr.New(
+        lexrankmmr.MaxLines(maxLines),            // option (default 0)
+        lexrankmmr.MaxCharacters(maxCharacters),  // option (default 0)
+        lexrankmmr.Threshold(threshold),          // option (default 0.1)
+        lexrankmmr.Tolerance(tolerance),          // option (default 0.0001)
+        lexrankmmr.Damping(damping),              // option (default 0.85)
+        lexrankmmr.Lambda(lambda),                // option (default 1.0)
     )
     err = summary.Summarize(text)
     if err != nil {
