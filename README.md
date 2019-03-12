@@ -1,4 +1,4 @@
-# lexrankmmr
+# [lexrankmmr](https://godoc.org/github.com/ramenjuniti/lexrank-mmr)
 
 [![Build Status](https://travis-ci.org/ramenjuniti/lexrankmmr.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrankmmr)
 
