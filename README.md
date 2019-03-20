@@ -1,7 +1,7 @@
-# [lexrankmmr](https://godoc.org/github.com/ramenjuniti/lexrank-mmr)
+# lexrankmmr
 
-[![Build Status](https://travis-ci.org/ramenjuniti/lexrankmmr.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrankmmr)
 [![GoDoc](http://godoc.org/github.com/fabioberger/chrome?status.svg)](https://godoc.org/github.com/ramenjuniti/lexrank-mmr)
+[![Build Status](https://travis-ci.org/ramenjuniti/lexrankmmr.svg?branch=master)](https://travis-ci.org/ramenjuniti/lexrankmmr)
 
 ## Algorithm
 
